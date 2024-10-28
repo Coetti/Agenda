@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">Agenda</string>
+    <string name="app_name">AGENDA</string>
+    <string name="fragment_1_title">NOVO COMPROMISSO</string>
+    <string name="button_data">DATA</string>
+    <string name="button_hora">HORA</string>
+    <string name="button_ok">ADICIONAR</string>
+    <string name="button_hoje">HOJE</string>
+    <string name="button_outra_data">OUTRA DATA</string>
+    <string name="text_hoje">Compromissos de hoje!</string>
+    <string name="text_compromisso_descricao">Insira a descrição do compromisso!</string>
+    <string name="text_compromissos">COMPROMISSOS</string>
 </resources>

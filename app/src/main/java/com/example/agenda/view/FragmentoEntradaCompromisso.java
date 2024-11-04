@@ -1,6 +1,7 @@
 package com.example.agenda.view;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,6 +57,7 @@ public class FragmentoEntradaCompromisso extends Fragment {
                 editTextDescricao.setText("");
                 buttonData.setText("Data");
                 buttonHora.setText("Hora");
+                Log.d("FragmentoEntrada", "Descricao do Compromisso: " + descricao + "\nData do Compromisso: " + dataSelecionada + "\nHora do Compromisso: " + horaSelecionada);
             } else {
                 Toast.makeText(getContext(), "Por favor, preencha todos os campos!", Toast.LENGTH_SHORT).show();
             }

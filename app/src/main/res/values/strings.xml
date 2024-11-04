@@ -6,7 +6,7 @@
     <string name="button_ok">ADICIONAR</string>
     <string name="button_hoje">HOJE</string>
     <string name="button_outra_data">OUTRA DATA</string>
-    <string name="text_hoje">Compromissos de hoje!</string>
+    <string name="text_display_data">VISUALIZANDO -> </string>
     <string name="text_compromisso_descricao">Insira a descrição do compromisso!</string>
     <string name="text_compromissos">COMPROMISSOS</string>
 </resources>

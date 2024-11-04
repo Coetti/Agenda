@@ -14,6 +14,8 @@ import androidx.fragment.app.Fragment;
 import com.example.agenda.R;
 import com.example.agenda.utils.DataPickerListener;
 
+import java.util.Calendar;
+
 public class FragmentoVisualizacaoCompromisso extends Fragment implements DataPickerListener {
 
     private TextView textoCompromissos;
@@ -42,12 +44,17 @@ public class FragmentoVisualizacaoCompromisso extends Fragment implements DataPi
     }
 
     private void mostrarCompromissosDoDiaAtual() {
-        textoCompromissos.setText("Mostrando compromissos do dia atual...");
+        Calendar calendar = Calendar.getInstance();
+        int ano = calendar.get(Calendar.YEAR);
+        int mes = calendar.get(Calendar.MONTH);
+        int dia = calendar.get(Calendar.DAY_OF_MONTH);
+        String dataHoje ="VISUALIZANDO -> " + dia + "/" + (mes + 1) + "/" + ano;
+        textoCompromissos.setText(dataHoje);
     }
 
     @Override
     public void onDataSelecionada(int ano, int mes, int dia) {
-        String dataSelecionada = dia + "/" + (mes + 1) + "/" + ano;
-        textoCompromissos.setText("Mostrando compromissos da data: " + dataSelecionada);
+        String dataSelecionada ="VISUALIZANDO -> " + dia + "/" + (mes + 1) + "/" + ano;
+        textoCompromissos.setText(dataSelecionada);
     }
 }

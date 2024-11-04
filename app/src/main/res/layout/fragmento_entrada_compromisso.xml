@@ -81,8 +81,9 @@
         android:id="@+id/edittext_descricao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minLines="3"
         android:hint="@string/text_compromisso_descricao"
-        android:background="@color/white"/>
+        android:background="@drawable/borda_textinput"/>
 
 
 

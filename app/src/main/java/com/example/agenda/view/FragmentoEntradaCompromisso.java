@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.agenda.R;
 import com.example.agenda.model.Compromisso;
+import com.example.agenda.database.CompromissosDB;
 
 public class FragmentoEntradaCompromisso extends Fragment {
 
@@ -21,6 +22,7 @@ public class FragmentoEntradaCompromisso extends Fragment {
     private Button buttonHora;
     private EditText editTextDescricao;
     private Button buttonOk;
+    private CompromissosDB compromissosDB;
 
     @Nullable
     @Override
@@ -31,6 +33,8 @@ public class FragmentoEntradaCompromisso extends Fragment {
         buttonHora = view.findViewById(R.id.button_hora);
         editTextDescricao = view.findViewById(R.id.edittext_descricao);
         buttonOk = view.findViewById(R.id.button_ok);
+
+        compromissosDB = new CompromissosDB(getContext());
 
         buttonData.setOnClickListener(v -> {
             DataPickerDialog dialog = new DataPickerDialog((view1, year, month, dayOfMonth) -> {
@@ -47,13 +51,15 @@ public class FragmentoEntradaCompromisso extends Fragment {
         });
 
         buttonOk.setOnClickListener(v -> {
-            String nome = "";
             String descricao = editTextDescricao.getText().toString();
             String dataSelecionada = buttonData.getText().toString();
             String horaSelecionada = buttonHora.getText().toString();
 
             if (!descricao.isEmpty() && !dataSelecionada.equals("Data") && !horaSelecionada.equals("Hora")) {
-                Compromisso novoCompromisso = new Compromisso(nome, descricao, dataSelecionada, horaSelecionada);
+
+                Compromisso novoCompromisso = new Compromisso(descricao, dataSelecionada, horaSelecionada);
+                compromissosDB.addCompromisso(novoCompromisso);
+
                 editTextDescricao.setText("");
                 buttonData.setText("Data");
                 buttonHora.setText("Hora");

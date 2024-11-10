@@ -21,6 +21,15 @@
             android:textColor="@color/colorPrimary"
             android:layout_marginBottom="16dp"
             android:gravity="center"/>
+        <TextView
+            android:id="@+id/data_visualizacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EXIBINDO TODOS"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"/>
 
     </LinearLayout>
 
@@ -35,7 +44,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
-            android:textSize="22sp"
+            android:textSize="18sp"
+            android:textAlignment="center"
             android:padding="8dp"
             android:background="@drawable/borda_data_display" />
 

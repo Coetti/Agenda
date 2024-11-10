@@ -1,21 +1,15 @@
 package com.example.agenda.model;
 
 public class Compromisso {
-    private String nome;
     private String descricao;
     private String data;
     private String hora;
 
 
-    public Compromisso(String nome, String descricao, String data, String hora){
-        this.nome = nome;
+    public Compromisso(String descricao, String data, String hora){
         this.descricao = descricao;
         this.data = data;
         this.hora = hora;
-    }
-
-    public String getNome(){
-        return nome;
     }
 
     public String getDescricao(){
@@ -28,10 +22,6 @@ public class Compromisso {
 
     public String getHora(){
         return hora;
-    }
-
-    public void setNome(String nome){
-        this.nome = nome;
     }
 
     public void setDescricao(String descricao){
@@ -47,11 +37,9 @@ public class Compromisso {
     }
 
     public String imprimeCompromisso() {
-        return "Compromisso{" +
-                "nome='" + nome + '\'' +
-                ", descrição='" + descricao + '\'' +
-                ", data='" + data + '\'' +
-                ", hora='" + hora + '\'' +
-                '}';
+        return "Compromisso" + '\n' +
+                descricao + '\n' +
+                "Data: " + data +
+                " Hora: " + hora + '\n';
     }
 }
